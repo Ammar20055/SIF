@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from config import (
     ASSISTANT_NAME,
-    VFF35,
+    BOT_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
     OWNER_NAME,
@@ -17,7 +17,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""👋🏻 **اهلا بك[{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-🎗 **[{VFF35}](https://t.me/{BOT_USERNAME}) انا بوت استطيع تشغيل الموسيقى والفيديو في المكالمات الصوتية!**
+🎗 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) انا بوت استطيع تشغيل الموسيقى والفيديو في المكالمات الصوتية!**
 
 ℹ️ **لمعرفة اوامر هذا البوت اضغط على » الاوامر الاساسية!**
 
@@ -40,7 +40,7 @@ async def cbstart(_, query: CallbackQuery):
                         "قروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "قناة البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
@@ -68,7 +68,7 @@ async def cbguides(_, query: CallbackQuery):
 
 ℹ️ ** اذ لم ينضم حساب المساعد اكتب .غادر , وبعد ذالك اكتب .انضم**
 
-ℹ️ __بواسطة  {VFF35} __""",
+ℹ️ __بواسطة  {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("رجوع", callback_data="cbstart")]]
         ),
@@ -82,7 +82,7 @@ async def cbcmds(_, query: CallbackQuery):
 
 » **مرحبا بك في قائمة الاوامر الاساسية يمكنك معرفة الاوامر عن طريق استخدام الازرار ادناة !**
 
-ℹ️ __بواسطة {VFF35} __""",
+ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -117,7 +117,7 @@ async def cbbasic(_, query: CallbackQuery):
 » .فحص - لاضهار حاله البوت ان يعمل او لا
 » .الحاله - فحص البوت في المجموعة
 
-ℹ️ __بواسطة {VFF35} __""",
+ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
         ),
@@ -140,7 +140,7 @@ async def cbadmin(_, query: CallbackQuery):
 » .انضم - دعوة حساب المساعد للمجموعة
 » .غادر - لخروج حساب مساعد من لمجموعة
 
-ℹ️ __بواسطة {VFF35} __""",
+ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
         ),
@@ -158,7 +158,7 @@ async def cbsudo(_, query: CallbackQuery):
 » .اعادة - اعادة تشغيل البوت
 » .مغادرة كل المجموعات - لمغادرة حساب المساعد من كل المجموعات
 
-ℹ️ __بواسطة {VFF35} __""",
+ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
         ),
