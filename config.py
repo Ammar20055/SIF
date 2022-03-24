@@ -7,13 +7,13 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "VFF35")
+SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_NAME = getenv("BOT_NAME", "Video Stream")
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 OWNER_NAME = getenv("OWNER_NAME", "QABNADLIB")
-ALIVE_NAME = getenv("ALIVE_NAME", "QABNADLIB")
+ALIVE_NAME = getenv("ALIVE_NAME", "𝐒𝐎𝗨𝐑𝐂𝐄 𝐂𝐎𝐁𝐑𝐀")
 BOT_USERNAME = getenv("BOT_USERNAME", "sdaasfs_bot")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "QABNADLIB")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "faqek")
